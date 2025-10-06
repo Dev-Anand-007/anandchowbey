@@ -2,7 +2,7 @@ import React from "react";
 import { WobbleCard } from "../../ui/wobble-card";
 import spotify from "@/assets/work_logo/spotify_clone.png";
 import derch from "@/assets/work_logo/derch.png";
-import canva from "@/assets/work_logo/canva.jpg";
+import canva from "@/assets/work_logo/Canva.jpg";
 import instagram from "@/assets/work_logo/instagram.png";
 import videoEditing from "@/assets/work_logo/videoEditing.jpg";
 import CurvedLoop from "../../ui/CurvedLoop";
