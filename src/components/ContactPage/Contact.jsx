@@ -159,7 +159,7 @@ export const Contact = () => {
                   <input
                     type="text"
                     name="budget"
-                    placeholder="Budget (You have in you mind)"
+                    placeholder="Budget (You have in your mind)"
                     value={formData.budget}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 focus:bg-white/10 transition-all shadow-lg shadow-black/20"

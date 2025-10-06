@@ -89,7 +89,7 @@ export const Connect = () => {
   };
 
   return (
-    <section className="flex flex-col gap-4 items-center mt-16 md:mt-24 lg:mt-32 justify-center w-full text-white">
+    <section className="flex flex-col  py-4 px-[7vw] md:px-[2vw] lg:px-[4vw] gap-4 items-center mt-16 md:mt-24 lg:mt-32 justify-center w-full text-white">
       <h2 className="font-bold md:text-5xl text-3xl ">
         Need a <span className={`text-blue-400`}>Developer ?</span>{" "}
         {/* or a{" "}
