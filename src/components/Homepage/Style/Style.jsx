@@ -64,40 +64,65 @@ export const Style = () => {
 };
 
 const Card = ({ title, subtitle, icon, children }) => {
-  const [hovered, setHovered] = React.useState(false);
+  const [active, setActive] = React.useState(false);
+
+  const isMobile = window.innerWidth < 1024;
+
+  const handleClick = () => {
+    if (isMobile) setActive((prev) => !prev);
+  };
+
   return (
     <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className="border border-white group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[30rem] relative"
+      onMouseEnter={() => !isMobile && setActive(true)}
+      onMouseLeave={() => !isMobile && setActive(false)}
+      onClick={handleClick}
+      className="border border-white group/canvas-card flex items-center justify-center dark:border-white/[0.2] max-w-sm w-full mx-auto p-4 relative h-[30rem] cursor-pointer"
     >
-      <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-white" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-white" />
-      <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-white" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-white" />
+      {/* Corner icons */}
+      <Icon className="absolute h-6 w-6 -top-3 -left-3 text-white" />
+      <Icon className="absolute h-6 w-6 -bottom-3 -left-3 text-white" />
+      <Icon className="absolute h-6 w-6 -top-3 -right-3 text-white" />
+      <Icon className="absolute h-6 w-6 -bottom-3 -right-3 text-white" />
+
+      {/* Canvas Reveal */}
       <AnimatePresence>
-        {hovered && (
+        {active && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="h-full w-full absolute inset-0"
+            exit={{ opacity: 0 }}
+            className="absolute inset-0 w-full h-full"
           >
             {children}
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Content */}
       <div className="relative z-20 text-center">
-        <div className="group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0 transition duration-200 flex items-center justify-center mx-auto">
+        <div
+          className={`transition-all duration-200 flex items-center justify-center mx-auto ${
+            active ? "opacity-0 -translate-y-4" : "opacity-100 translate-y-0"
+          }`}
+        >
           {icon}
         </div>
-        <h2 className="text-3xl text-white font-bold opacity-0 group-hover/canvas-card:opacity-100 group-hover/canvas-card:-translate-y-4 transition duration-200 flex items-center justify-center mx-auto">
+        <h2
+          className={`text-3xl text-white font-bold transition-all duration-200 flex items-center justify-center mx-auto ${
+            active ? "opacity-100 -translate-y-4" : "opacity-0 translate-y-0"
+          }`}
+        >
           {title}
         </h2>
-        <p className="text-base text-white opacity-0 group-hover/canvas-card:opacity-100 group-hover/canvas-card:-translate-y-4 transition duration-200 flex items-center justify-center mx-auto">
+        <p
+          className={`text-base text-white transition-all duration-200 flex items-center justify-center mx-auto ${
+            active ? "opacity-100 -translate-y-4" : "opacity-0 translate-y-0"
+          }`}
+        >
           {subtitle}
         </p>
       </div>
-
     </div>
   );
 };
