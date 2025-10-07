@@ -5,6 +5,8 @@ import profileImage from '../../../assets/profile2.png';
 import Tilt from 'react-parallax-tilt';
 import DotGrid from '../../../elements/DotGrid';
 import { motion } from 'framer-motion';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from 'react-toastify';
 
 
 export const About = () => {
@@ -12,6 +14,15 @@ export const About = () => {
 
         <section id='about'
             className='py-4 px-[7vw] md:px-[2vw] lg:px-[4vw] font-sans mt-16 md:mt-24 lg:mt-32'>
+            <ToastContainer
+                position="top-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                pauseOnHover
+                theme="dark"
+            />
 
 
             <div className='flex flex-col-reverse md:flex-row justify-between items-center'>
@@ -37,7 +48,7 @@ export const About = () => {
                                     'Full Stack Enthusiast',
                                     'Freelance App & Web Developer',
                                     'Tech Creator',
-                                    
+
                                 ],
                                 autoStart: true,
                                 loop: true,
@@ -79,6 +90,7 @@ export const About = () => {
                         <motion.button
                             whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(96, 165, 250, 0.5)" }}
                             whileTap={{ scale: 0.95 }}
+                            onTap={() => { toast.error("Button Disabled, Contact admin") }}
                             className="text-sm md:text-md bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-8 rounded-full font-bold"
                         >
                             View Resume

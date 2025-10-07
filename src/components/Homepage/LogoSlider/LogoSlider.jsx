@@ -2,14 +2,16 @@ import React from 'react'
 import LogoLoop from '../../../elements/LogoLoop';
 import solono from '../../../assets/company_logo/solono.jpg'
 import gopotu from '../../../assets/company_logo/gopotu.jpeg'
+import AlsolTech from '../../../assets/company_logo/alsol.png'
 import { motion } from 'framer-motion';
 
 export const LogoSlider = () => {
 
   // Alternative with image sources
   const imageLogos = [
-    { src: solono, alt: "Company 1", href: "https://company1.com" },
-    { src: gopotu, alt: "Company 2", href: "https://company2.com" },
+    { src: solono, alt: "Solono", href: "https://www.solonoapp.com/" },
+    { src: gopotu, alt: "Gopotu", href: "https://gopotu.com/" },
+    { src: AlsolTech, alt: "Alsol Tech", href: "https://alsoltech.com/" },
 
   ];
   return (

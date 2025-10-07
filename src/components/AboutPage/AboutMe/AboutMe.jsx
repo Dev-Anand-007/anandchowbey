@@ -5,6 +5,9 @@ import { FaInstagram, FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { MovingBorderDemo } from '@/components/ui/moving-border';
 import { Link } from 'react-router-dom';
 import { FiTwitter } from 'react-icons/fi';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from 'react-toastify';
+
 
 export const Aboutme = () => {
     const socialLinks = [
@@ -49,6 +52,15 @@ export const Aboutme = () => {
                         transition={{ duration: 0.6 }}
                         className='md:col-span-2 flex flex-col items-center md:items-start space-y-6'
                     >
+                        <ToastContainer
+                            position="top-right"
+                            autoClose={3000}
+                            hideProgressBar={false}
+                            newestOnTop={false}
+                            closeOnClick
+                            pauseOnHover
+                            theme="dark"
+                        />
                         {/* Profile Image */}
                         <motion.div
                             whileHover={{ scale: 1.03 }}
@@ -295,15 +307,13 @@ export const Aboutme = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.8 }}
+                            onTap={() => { toast.error("Button Disabled, Contact admin") }}
                             className="flex flex-col sm:flex-row gap-4 pt-4"
                         >
+
+                            <MovingBorderDemo>View Resume </MovingBorderDemo>
+
                             <Link
-                                to="/contact"
-                            // onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                            >
-                                <MovingBorderDemo>View Resume </MovingBorderDemo>
-                            </Link>
-                             <Link
                                 to="/contact"
                             // onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                             >

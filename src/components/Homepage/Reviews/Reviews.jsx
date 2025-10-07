@@ -4,33 +4,36 @@ import { FaQuoteLeft } from 'react-icons/fa';
 import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 import { FiStar } from 'react-icons/fi';
-
+import solono from '../../../assets/company_logo/solono.jpg'
+import gopotu from '../../../assets/company_logo/gopotu.jpeg'
+import AlsolTech from '../../../assets/company_logo/alsol.png'
 export const Reviews = () => {
   const reviews = [
   {
-    id: 1,
-    name: "Sarah Johnson",
-    role: "CEO, TechStart",
-    image: "https://i.pravatar.cc/150?img=1",
-    rating: 5,
-    text: "Working with Anand was an absolute pleasure. His attention to detail and technical expertise helped bring our vision to life. Highly recommended!"
-  },
-  {
-    id: 2,
-    name: "Michael Chen",
-    role: "Product Manager, InnovateCo",
-    image: "https://i.pravatar.cc/150?img=2",
-    rating: 5,
-    text: "Exceptional developer with great communication skills. Anand delivered our mobile app ahead of schedule with outstanding quality."
-  },
-  {
-    id: 3,
-    name: "Emily Rodriguez",
-    role: "Founder, StartupHub",
-    image: "https://i.pravatar.cc/150?img=3",
-    rating: 5,
-    text: "Anand's problem-solving abilities are remarkable. He transformed our complex requirements into a sleek, user-friendly application."
-  },
+  id: 1,
+  name: "Sunayna",
+  role: "Founder, Solono",
+  image: solono,
+  rating: 5,
+  text: "Working with Anand was an absolute pleasure. He handled both the frontend and backend of our Flutter app with precision and creativity. His attention to detail truly brought our vision to life."
+},
+{
+  id: 2,
+  name: "Samim",
+  role: "Founder, Gopotu",
+  image: gopotu,
+  rating: 5,
+  text: "Anand is an exceptional developer who managed both backend and frontend seamlessly. His clear communication and ability to deliver polished results ahead of time made the collaboration effortless."
+},
+{
+  id: 3,
+  name: "Alsol Technology",
+  role: "Company where Anand completed his internship",
+  image: AlsolTech,
+  rating: 5,
+  text: "During his internship, Anand took responsibility for live Flutter projects — managing front-end development, API integrations, and UI/UX improvements. His reliability and technical expertise made him a valuable team member."
+}
+
 
 ];
   return (
