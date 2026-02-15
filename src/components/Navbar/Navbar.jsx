@@ -23,7 +23,7 @@ export const Navbar = () => {
     { id: "work", label: "Work" },
     { id: "services", label: "Services" },
     { id: "blogs", label: "Blogs" },
-    { id: "contact", label: "Contact" },
+    // { id: "contact", label: "Contact" },
   ];
 
   const handleNavigate = (id) => {
