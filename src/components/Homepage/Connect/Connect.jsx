@@ -230,12 +230,12 @@ export const Connect = () => {
         </TextRevealCard>
       </div>
 
-      <Link
+      {/* <Link
         to="/contact"
         // onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
         <MovingBorderDemo>Get a Quote</MovingBorderDemo>
-      </Link>
+      </Link> */}
     </section>
   );
 };
