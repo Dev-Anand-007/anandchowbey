@@ -45,11 +45,11 @@ function App() {
                 <>
                   <Navbar />
                   <About />
-                  <Stats />
-                  <LogoSlider />
+                  {/* <Stats /> */}
+                  {/* <LogoSlider /> */}
                   <Skills />
                   <Experience />
-                  <Reviews />
+                  {/* <Reviews /> */}
                   <Style />
                   <Connect />
                   <Footer />
