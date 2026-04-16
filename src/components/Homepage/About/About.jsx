@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import TypewriterComponent from 'typewriter-effect';
-import profileImage from '../../../assets/profile2.png';
+import profileImage from '../../../assets/profile_new.jpeg';
 import Tilt from 'react-parallax-tilt';
 import DotGrid from '../../../elements/DotGrid';
 import { motion } from 'framer-motion';
